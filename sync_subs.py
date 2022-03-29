@@ -19,15 +19,15 @@ def sync_subs_srt(_reference_srt, _unsync_srt, _output):
     subprocess.call(_command)
 
 
-def sync_subs_audio(_paths):
+def sync_subs_audio(_path):
     # using subsync library to do the magic
     _command = [
         shutil.which("ffs"),
-        rf"{_paths}",  # path to the video
+        rf"{_path}",  # path to the video
         "-i",
-        rf"{_paths[:-4]}.srt",  # the subtitle for input, using the same name as the film + .srt
+        rf"{_path[:-4]}.srt",  # the subtitle for input, using the same name as the film + .srt
         "-o",
-        rf"{_paths[:-4]}.srt",  # the output replaces the original subtitle
+        rf"{_path[:-4]}.srt",  # the output replaces the original subtitle
         "--encoding",
         "utf-8",
     ]  # encoding
