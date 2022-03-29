@@ -39,6 +39,7 @@ download_subs.cmd script that sends the path of the selected file or files to ou
 ```
 @echo off
 cls
-python3 path_to_script\sync_subs.py %*
+cmd /k "cd /d C:\path_to_virtualenv\venv\Scripts & activate & cd /d    C:\path_to\sync_subs & python sync_subs.py %*
 pause
+
 ```
