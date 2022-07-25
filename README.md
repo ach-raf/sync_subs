@@ -1,4 +1,5 @@
 # sync_subs
+
 Script to use the subsync [library](https://github.com/smacke/ffsubsync)
 
 # Usage:
@@ -11,8 +12,8 @@ The output replaces the old subtitle.
 
 (you can change any of this behaviour inside the script)
 
-
 # Requirements:
+
 -Windows. (just for the send to part)
 
 -Python 3.
@@ -20,25 +21,24 @@ The output replaces the old subtitle.
 # Setup:
 
 ```
-pip install ffmpeg
+pip install -r requirements.txt
 ```
 
-```
-pip install ffsubsync
-```
-
-Download the sync_subs.py file. 
+Download the sync_subs.py file.
 
 On windows "Ctrl+R" and run "shell:sendto"
 this will open the "send to" directory so we can add our bash script.
 
-
 To run the python script you must create sync_subs.cmd (this name will show on the send to menu)
 
-download_subs.cmd script that sends the path of the selected file or files to our python script
+sync_subs.cmd script that sends the path of the selected file or files to our python script
+
 ```
 @echo off
 cls
 python3 path_to_script\sync_subs.py %*
 pause
 ```
+
+Ps:
+In case of errors, please remember to have "windows build tools" installed.
